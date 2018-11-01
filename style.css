@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans|Krub');
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #fafafa;
+  animation: fadein 3s;
+  -webkit-animation: fadein 3s;
+  -moz-animation: fadein 3s;
+  -o-animation: fadein 3s;
+  -ms-animation: fadein 3s;
+}
+
+h1, h2, h3 {
+  font-size: 2em;
+}
+
+h1, h2{
+  font-family: 'Libre Baskerville', serif;
+}
+
+a:link {
+  text-decoration: none;
+  color: #aa5145;
+}
+
+a:hover {
+  color: #872e22;
+  transition: 0.2s;
+}
+
+a:hover, main #signup input[type=submit]:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header {
+  width: 100%;
+  height: 25em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: url('https://wustl.edu/wp-content/uploads/2014/09/danforth-aerial.jpg') center center no-repeat fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+}
+
+header::before {
+  content: " ";
+  width: 100%;
+  height: 25em;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+
+header #logo {
+  z-index: 2;
+}
+
+header input[type=search] {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  font-size: 14pt;
+  padding: 0.5em 2em 0.5em 4em;
+  border: 1px solid white;
+  border-radius: 3px;
+  background: transparent url('searchicon.png') 10% 50% no-repeat;
+  background-size: 15px;
+}
+
+header input[type=search]::placeholder {
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+
+header input[type=search]:focus {
+  color: #888;
+  outline-color: darkgray;
+  background: #fff url('searchicon_dark.png') 3% 50% no-repeat;
+  background-size: 15px;
+}
+
+nav {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  width: 96%;
+  background: #8b1100;
+  font-family: 'Krub', sans-serif;
+  font-size: 1.2em;
+  z-index: 10;
+  padding: 0% 2%;
+}
+
+nav ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em 0em;
+  color: #fff;
+}
+
+nav a {
+  text-align: center;
+  color: #fdfdfd;
+  font-weight: 200;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #D8B0AA;
+  transition: 0.3s;
+}
+
+.navlink:hover {
+  cursor: pointer;
+}
+
+.navlink:hover .dropdown {
+  position: absolute;
+  display: block;
+  background: #8b1100;
+  transition: 0.2s;
+}
+
+.dropdown {
+  display: none;
+  font-size: 0.8em;
+}
+
+.dropdown a {
+  display: block;
+  padding: 1em;
+  text-align: left;
+}
+
+.dropdown a:hover {
+  background: #5b0b00;
+}
+
+main {
+  background: #fafafa;
+}
+
+main h1 {
+  font-size: 2.5em;
+  color: #255723;
+  margin: 0;
+}
+
+main h2 {
+  color: #555;
+}
+
+main h3 {
+  font-size: 1.7em;
+  color: #ca402e;
+}
+
+main .sec {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  padding: 3em 0em;
+  text-align: center;
+}
+
+main .sec p {
+  line-height: 2;
+  text-align: center;
+  padding: 0em 2em;
+}
+
+main .sec .button {
+  display: inline-block;
+  background: #ae1400;
+  color: #fdfdfd;
+  padding: 0.5em 1.5em;
+  margin-top: 1em;
+  transition: 0.3s;
+}
+
+main .sec .button:hover {
+  background: #6D1C11;
+  transition: 0.3s;
+}
+
+main .dark {
+  background: #ccc9a1;
+}
+
+main .dark h2 {
+  color: #5B5F4D;
+}
+
+main #quote {
+  border-bottom: 2px solid #ccc9a1;
+  color: #6E745E;
+  padding: 5.5em 0em;
+}
+
+main blockquote {
+  font: 20pt 'Libre Baskerville', serif;
+  color: #AE1400;
+}
+
+main #apply table {
+  width: 80%;
+  margin: auto;
+}
+
+main #apply table td {
+  width: 50%;
+  text-align: left;
+  padding-right: 2em;
+  line-height: 1.5;
+}
+
+main #apply table td p {
+  text-align: left;
+}
+
+main #events {
+  padding-bottom: 0em;
+}
+
+main #events .cover {
+  width: 100%;
+  height: 20em;
+  background: url("https://artsci.wustl.edu/sites/artsci.wustl.edu/files/styles/spotlight_mobile/public/Major-Department%20Cards/Jewish%20Islamic%20Near%20East.png?itok=GYeXMab7") center center no-repeat fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+}
+
+main #events::before {
+  position: absolute;
+  content: " ";
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 100px solid #fafafa;
+  top: 18em;
+  left: 43.5%;
+}
+
+main #announcements, main #announcements h2 {
+  width: 100%;
+}
+
+main #announcements #annbody {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+main #announcements .announcement {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  line-height: 2;
+  text-align: justify;
+  padding: 0em 2em;
+  vertical-align: middle;
+}
+
+main #announcements .announcement .button {
+  width: 33%;
+  text-align: center;
+}
+
+main #ampersand {
+  background: #ccc9a1 url('ampersand.png') 80% 50% no-repeat;
+  background-size: 200px;
+}
+
+main #signup input[type=email] {
+  width: 30em;
+  margin: auto;
+  display: block;
+  font-size: 16pt;
+  padding: 0.5em;
+  border: 1px solid #DC7F73;
+}
+
+main #signup input[type=email]::placeholder {
+  color: #706E58;
+}
+
+main #signup input[type=email]:focus {
+  outline-color: #c42b17;
+  color: #706E58;
+}
+
+main #signup input[type=submit] {
+  margin-top: 2em;
+  padding: 1em;
+  width: 10em;
+  font-size: 12pt;
+  background: transparent;
+  border: 2px solid #dc7f73;
+  color: #c42b17;
+}
+
+main #spotlights {
+  width: 100%;
+  top: 0;
+}
+
+#spotlights .spotlight {
+  position: relative;
+  margin: auto;
+}
+
+#spotlights .spotlight img {
+  width: 50%;
+  height: 20em;
+  margin-bottom: 2em;
+}
+
+#spotlights .spotlight p {
+  width: 80%;
+  margin-top: 2em;
+  margin: auto;
+  text-align: justify;
+}
+
+#spotlights #buttons {
+  margin: auto;
+  margin-top: 2em;
+  width: 30%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#spotlights #buttons .transition {
+  width: 15px;
+  height: 15px;
+  background: #888;
+}
+
+#spotlights #buttons .transition:hover {
+  cursor: pointer;
+}
+
+#spotlights #buttons .focus {
+  background: #ccc;
+}
+
+#spotlights #arrows {
+  top: 40%;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+#spotlights #arrows .arrow {
+  font-size: 50pt;
+  color: #ae1400;
+}
+
+#spotlights #arrows .arrow:hover {
+  cursor: pointer;
+  color: #ff8a7b;
+}
+
+#prev {
+  margin-left: 3em;
+}
+
+#next {
+  margin-right: 3em;
+}
+
+footer {
+  font-size: 0.7em;
+  padding: 2em;
+  text-align: center;
+  line-height: 3;
+  background: #333;
+  color: #ccc;
+}
+
+footer h2 {
+  margin: 0;
+}
+
+footer a {
+  color: #eee;
+}
+
+footer ul {
+  text-align: center;
+  margin: auto;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  line-height: 3;
+}
+
+footer ul li {
+  line-height: 1;
+  margin: 0.5em 1em;
+}
+
+@media only screen and (max-width: 950px) {
+  #prev {
+    margin-left: 1em;
+  }
+
+  #next {
+    margin-right: 1em;
+  }
+}
+
+@media only screen and (max-width: 893px) {
+  main #events::before {
+    top: 20em;
+    left: 37%;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  main #announcements #annbody{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+  }
+
+  main #announcements .announcement {
+    width: 90%;
+    margin: 1em 0em;
+    padding: 0em 1em;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  main #signup input[type=email], header input[type=search] {
+    width: 16em;
+  }
+
+  main #apply table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  main #apply table tr td {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  nav {
+    font-size: 15pt;
+  }
+
+  main #spotlights .spotlight p {
+    height: 20%;
+    padding: 0;
+  }
+
+  main #spotlights .spotlight img {
+    width: 95%;
+  }
+
+  main #spotlights #arrows {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 486px) {
+  main #events::before {
+    top: 23em;
+    left: 7em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  main #signup input[type=email], header input[type=search] {
+    width: 80%;
+  }
+
+  main #events::before {
+    top: 25em;
+    left: 5em;
+  }
+}
+
+@media only screen and (width: 375px) {
+  main #events::before {
+    top: 23em;
+  }
+}
